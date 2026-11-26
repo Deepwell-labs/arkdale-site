@@ -1,89 +1,127 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'sha256-bgYwHvU+oFrnvcxFdZWaY0fkYvhdbIfYT7NrLTkQgi8='; script-src 'sha256-NopqS0B4sfQcmSYvMnaH9YJbi9cSP1dMEclBtTRjN1k='; font-src 'self'; img-src data:; form-action mailto:; base-uri 'none'">
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'sha256-fNSCtPTknwXFKnEs+aojKdA9Dz/Ki7/fIGKgfVW5Y5s=' 'sha256-TU+VoLk7AHT6ERjHj7ilCDHKEKJ/aOTQV4xPDfVQU4I='; script-src 'sha256-9WnZs3aSuFW4Zik8/vluAupyop0b745eQ7BZkdaRlxo='; font-src 'self'; img-src 'self' data:; form-action mailto:; base-uri 'none'">
 <meta name="referrer" content="no-referrer">
-<title>Arkdale</title>
 <meta name="description" content="Run every protective operation from one place. Built for executive protection, corporate security and family office teams. Simple from the field to the office.">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cstyle%3Epath%7Bstroke:%230B0D0E%7D@media (prefers-color-scheme:dark)%7Bpath%7Bstroke:%23FFFFFF%7D%7D%3C/style%3E%3Cpath d='M45.315 20.951 L20.369 64.158 A5.41 5.41 0 0 0 22.786 71.775 A64.918 64.918 0 0 0 77.214 71.775 A5.41 5.41 0 0 0 79.631 64.158 L54.685 20.951 A5.41 5.41 0 0 0 45.315 20.951 Z' fill='none' stroke-width='8' stroke-linejoin='round'/%3E%3C/svg%3E">
+<title>Arkdale</title>
 <style>
-/* An installed Inter is used first, exactly as on the landing page (same rendering); "Arkdale Inter" (the copied files) is the fallback for every other visitor. */
-@font-face{font-family:"Arkdale Inter";font-weight:400;font-display:swap;src:url(inter-400.woff) format("woff")}
-@font-face{font-family:"Arkdale Inter";font-weight:500;font-display:swap;src:url(inter-500.woff) format("woff")}
-@font-face{font-family:"Arkdale Inter";font-weight:600;font-display:swap;src:url(inter-600.woff) format("woff")}
-@font-face{font-family:"Arkdale Inter";font-weight:700;font-display:swap;src:url(inter-700.woff) format("woff")}
-/* Copied from the landing page top (docs/design/studio/page/index.html on design/studio). Do not restyle. */
-:root{--amber:#E8A33D;--sans:"Inter","Arkdale Inter",system-ui,-apple-system,"Segoe UI",sans-serif;--mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
---bg:#FFFFFF;--fg:#0B0D0E;--mu:#6B7177;--mu2:#9AA0A6;--ln:rgba(11,13,14,.08);--btn:#0B0D0E;--btnfg:#FFFFFF}
-*{box-sizing:border-box}html,body{margin:0;background:var(--bg);color:var(--fg)}
-body{font-family:var(--sans);font-size:15px;line-height:1.5;-webkit-font-smoothing:antialiased;font-feature-settings:"cv11","ss01";overflow-x:clip;min-height:100vh;display:flex;flex-direction:column}
-main{flex:1;width:100%}
-.wrap{max-width:1320px;margin:0 auto;padding-inline:max(16px,env(safe-area-inset-left,0px))}
-.ark{display:block}
-.navwrap{border-bottom:1px solid var(--ln)}
-nav.top{display:flex;align-items:center;gap:30px;height:64px;font-size:13.5px;position:relative}
-.brand{display:flex;align-items:center;gap:10px;font-weight:600;font-size:13.5px;letter-spacing:.24em}
-.brand .ark{width:21px;height:21px}
-.hero2{padding-block:44px 48px;display:grid;grid-template-columns:minmax(0,1fr);gap:22px;justify-items:center;text-align:center}
-.hero2 h1{font-size:clamp(36px,5.2vw,72px);line-height:1.02;letter-spacing:-.045em;font-weight:560;max-width:18ch;margin:0 auto;text-wrap:balance}
-.hero2>p{margin:0 auto;color:var(--mu);font-size:18px;max-width:62ch}
-p.for{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 28px;color:var(--mu);font-size:13.5px;padding:36px 0 0;margin:0}
-p.for span::before{content:"";display:inline-block;width:5px;height:5px;border-radius:50%;background:var(--amber);margin-right:9px;vertical-align:middle}
-/* Request Access form: copied from the Request Access page (docs/design/studio/access/index.html on design/studio). */
-.af{margin:4px auto 0;width:100%;min-width:0;max-width:620px;border-radius:24px;background:#fff;box-shadow:0 0 0 1px var(--ln),0 30px 60px -40px rgba(11,13,14,.35);padding:32px;text-align:left}
-.af form{display:grid;grid-template-columns:1fr 1fr;gap:18px 16px}.af .full{grid-column:1/-1}
-.af label{display:grid;gap:7px;align-content:start;font-size:13.5px;font-weight:600;color:#3D4247}.af label small{font-weight:500;color:var(--mu2)}
-.af input,.af select,.af textarea{font:inherit;font-size:16px;color:var(--fg);background:#fff;border:1px solid rgba(11,13,14,.14);border-radius:11px;padding:12px 13px;outline:none;transition:border-color .2s,box-shadow .2s;width:100%;box-sizing:border-box;-webkit-appearance:none;appearance:none}
-.af select{background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M7 10l5 5 5-5' fill='none' stroke='%236B7177' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") right 12px center/16px no-repeat;padding-right:38px}
-.af textarea{min-height:96px;resize:vertical}.af ::placeholder{color:#B4B9BE;opacity:1}
-.af input:focus,.af select:focus,.af textarea:focus{border-color:#E8A33D;box-shadow:0 0 0 4px rgba(232,163,61,.16)}
-.af .bad input,.af .bad select{border-color:#C9473B}.af .err{display:none;font-size:12.5px;font-weight:500;color:#B23A2F}.af .bad .err{display:block}
-.af .send{grid-column:1/-1;display:flex;align-items:center;justify-content:center;gap:10px;border:0;background:#0B0D0E;color:#fff;font:inherit;font-size:15.5px;font-weight:550;border-radius:12px;padding:14px;cursor:pointer;transition:opacity .2s,transform .15s;-webkit-tap-highlight-color:transparent}
-.af .send:active{transform:scale(.99)}.af .send[disabled]{opacity:.7;cursor:default}
-.af .fine{grid-column:1/-1;margin:0;font-size:13px;color:var(--mu);text-align:center}
-.af .fine a{color:var(--fg);font-weight:550;text-decoration:none;border-bottom:1px solid rgba(11,13,14,.2)}
-.af .ok{display:none;text-align:center;padding:24px 8px 12px}.af.done form{display:none}.af.done .ok{display:grid;justify-items:center;gap:12px;animation:in .5s cubic-bezier(.2,.8,.2,1)}
-.af .ok i{width:52px;height:52px;border-radius:50%;background:#FDF3E2;display:grid;place-items:center}.af .ok i svg{width:26px;height:26px}
-.af .ok h2{margin:4px 0 0;font-size:24px;letter-spacing:-.025em;outline:none;max-width:100%;overflow-wrap:anywhere}.af .ok p{margin:0;color:var(--mu);font-size:16px;max-width:42ch;overflow-wrap:anywhere}
-.af .ok p.alt{font-size:13px;margin-top:2px}.af .ok p.alt a{color:var(--fg);font-weight:550;text-decoration:none;border-bottom:1px solid rgba(11,13,14,.2)}
-.af .ok .acts{display:flex;gap:22px;flex-wrap:wrap;justify-content:center;margin-top:8px}
-.af .ok .acts a,.af .ok .acts button{font:inherit;font-weight:550;font-size:14.5px;color:var(--fg);text-decoration:none;background:none;border:0;padding:0;cursor:pointer;border-bottom:1px solid rgba(11,13,14,.2)}
+@font-face{font-family:"Arkdale Inter";src:local("Inter"),url(inter-400.woff) format("woff");font-weight:400;font-display:swap}
+@font-face{font-family:"Arkdale Inter";src:local("Inter Medium"),url(inter-500.woff) format("woff");font-weight:500;font-display:swap}
+@font-face{font-family:"Arkdale Inter";src:local("Inter SemiBold"),url(inter-600.woff) format("woff");font-weight:600;font-display:swap}
+@font-face{font-family:"Arkdale Inter";src:local("Inter Bold"),url(inter-700.woff) format("woff");font-weight:700;font-display:swap}
+:root{--fg:#0B0D0E;--bg:#fff;--mu:#6B7177;--mu2:#9AA0A6;--body:#3D4247;--soft:#F6F6F3;--ln:rgba(11,13,14,.08);--amber:#E8A33D;--amlab:#C47F12;--bad:#B23A2F;
+--sans:"Arkdale Inter","Inter",system-ui,-apple-system,"Segoe UI",sans-serif}
+*{box-sizing:border-box}html{overflow-x:clip;scroll-behavior:smooth}html,body{margin:0;background:var(--bg);color:var(--fg)}
+body{font-family:var(--sans);font-size:15px;line-height:1.5;-webkit-font-smoothing:antialiased;overflow-x:clip}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--amber);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+.brand{display:flex;align-items:center;min-height:44px;gap:10px;font-weight:600;font-size:13.5px;letter-spacing:.24em;text-decoration:none}.brand svg{width:22px;height:22px}
+.navcta{display:inline-flex;align-items:center;min-height:44px;font-size:13.5px;font-weight:550;text-decoration:none;color:var(--fg);padding:0 16px;border-radius:10px;box-shadow:inset 0 0 0 1px rgba(11,13,14,.14);transition:background .2s}
+.navcta:hover{background:var(--soft)}
+.kk{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;color:var(--amlab)}
+.kk i{width:6px;height:6px;border-radius:50%;background:var(--amber)}
+h1{margin:0;font-weight:600;letter-spacing:-.045em;line-height:1.02;text-wrap:balance}
+.sub{margin:0;color:var(--mu);font-size:18.5px;line-height:1.5;text-wrap:balance}
+.for{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 26px;margin:0;padding:0;list-style:none;color:var(--mu);font-size:15px}
+.for li{display:flex;align-items:center;gap:9px}.for li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--amber)}
+footer.fe{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}footer.fe a{color:var(--mu);text-decoration:none}footer.fe a:hover{color:var(--fg)}
+footer{border-top:1px solid var(--ln);margin-top:96px;padding:26px 0 40px;color:var(--mu);font-size:13px}
+/* Request Access: three required fields; the rest folded under Add Details. Errors sit beside the label, so nothing moves. */
+.rq{width:100%;text-align:left;scroll-margin-top:20px}
+.rq form{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px 12px}
+.rq label,.rq .fld{display:grid;gap:6px;font-size:13px;font-weight:600;color:var(--body)}
+.rq .lh{display:flex;justify-content:space-between;align-items:baseline;gap:10px;height:19px;line-height:19px;white-space:nowrap}.rq .lh label,.rq .lh .err{line-height:19px;overflow:hidden;text-overflow:ellipsis}
+.rq .lh small{font-size:12.5px;font-weight:500;color:var(--mu2)}
+.rq .err{font-size:12.5px;font-weight:500;color:var(--bad);text-align:right}
+.rq input,.rq select,.rq textarea{font:inherit;font-weight:400;font-size:16px;color:var(--fg);background:#fff;border:1px solid rgba(11,13,14,.14);border-radius:11px;padding:12px 13px;min-height:48px;outline:none;width:100%;transition:border-color .2s,box-shadow .2s;-webkit-appearance:none;appearance:none}
+.rq textarea{min-height:84px;resize:vertical}
+.rq select{background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M7 10l5 5 5-5' fill='none' stroke='%236B7177' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") right 12px center/16px no-repeat;padding-right:36px}
+.rq ::placeholder{color:#B4B9BE}
+.rq select:has(option[value=""]:checked){color:#B4B9BE}.rq select option{color:var(--fg)}
+.rq input:focus,.rq select:focus,.rq textarea:focus{border-color:var(--amber);box-shadow:0 0 0 4px rgba(232,163,61,.16)}
+.rq .bad input,.rq .bad input:focus{border-color:#C9473B;box-shadow:0 0 0 4px rgba(201,71,59,.12)}
+.rq .opt{grid-column:1/-1;justify-self:start;border:0;background:none;padding:0 2px;min-height:44px;font:inherit;font-size:14px;font-weight:550;color:var(--mu);cursor:pointer;display:inline-flex;align-items:center;gap:6px}
+.rq .opt:hover{color:var(--fg)}.rq .opt svg{width:14px;height:14px;transition:transform .3s}.rq.open .opt svg{transform:rotate(45deg)}
+.rq .opt em{font-style:normal;font-weight:500;color:var(--mu2)}.rq.open .opt em{display:none}
+.rq .more{grid-column:1/-1;display:grid;grid-template-rows:0fr;transition:grid-template-rows .4s cubic-bezier(.2,.8,.2,1);margin-top:-14px}
+.rq .more>div{overflow:hidden;display:grid;grid-template-columns:1fr 1fr;gap:14px 12px;padding:0;margin:0 -4px;padding:0 4px}
+.rq:not(.open) .more{display:none}.rq.open .more>div{animation:in .35s cubic-bezier(.2,.8,.2,1)}.rq.open .more{grid-template-rows:1fr;margin-top:0}.rq.open .more>div{padding:4px 4px 6px}
+.rq .more .full{grid-column:1/-1}
+.rq .row{grid-column:1/-1;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.rq .send{border:0;background:var(--fg);color:#fff;font:inherit;font-size:15.5px;font-weight:550;border-radius:12px;min-height:50px;padding:0 22px;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:10px;transition:transform .15s,opacity .2s}
+.rq .send:active{transform:scale(.985)}.rq .send svg{width:16px;height:16px}
+.rq .nojs{margin:0;text-align:center;font-size:16px;color:var(--body)}
+.rq .fine{margin:0;font-size:12.5px;color:var(--mu2);max-width:62ch;text-wrap:balance}
+.rq .done-box{display:none;text-align:center;padding:18px 8px}.rq.done form{display:none}.rq.done .done-box{display:grid;justify-items:center;gap:10px;animation:in .5s cubic-bezier(.2,.8,.2,1)}
+.rq .done-box i{width:48px;height:48px;border-radius:50%;background:#FDF3E2;display:grid;place-items:center}.rq .done-box i svg{width:24px;height:24px}
+.rq .done-box{scroll-margin-top:96px}.rq .done-box h3{scroll-margin-top:140px;text-wrap:balance;margin:2px 0 0;font-size:22px;letter-spacing:-.025em;outline:none}.rq .done-box p{margin:0;color:var(--mu);max-width:46ch;text-wrap:balance}
+.rq .mhint{margin:6px 0 0;font-size:14px;font-weight:600;color:var(--fg)}
+@media (max-width:760px){.rq .manual{max-height:200px;overflow-y:auto!important}}
+.rq .manual{width:100%;max-width:460px;min-height:120px;resize:none;overflow:hidden;line-height:1.5;font:inherit;font-size:14px;border:1px solid rgba(11,13,14,.14);border-radius:11px;padding:10px 12px;color:var(--fg)}
+.rq .addr{font-weight:600;color:var(--fg);user-select:all}
+.rq .acts{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:6px}
+.rq .acts button{min-height:44px;border-radius:10px;padding:0 16px;font:inherit;font-size:14px;font-weight:550;cursor:pointer;border:0;background:var(--soft);color:var(--fg)}
+.rq .acts button.pr{background:var(--fg);color:#fff}
 @keyframes in{from{opacity:0;transform:translateY(8px)}}
-.ft2{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px 16px;padding:28px 16px 56px;max-width:1320px;width:100%;margin:96px auto 0;color:var(--mu);font-size:13px;border-top:1px solid var(--ln)}
-.ft2 a{color:inherit;text-decoration:none;transition:color .2s}.ft2 a:hover{color:#0B0D0E}
-@media (max-width:620px){.af{padding:22px 18px}.af form{grid-template-columns:1fr}.ft2{margin-top:64px}}
-@media (prefers-reduced-motion:reduce){.af.done .ok{animation:none}.af input,.af select,.af textarea,.af .send{transition:none}}
-</style></head><body>
-<div class="navwrap"><div class="wrap"><nav class="top" aria-label="Arkdale"><div class="brand"><svg class="ark" viewBox="0 0 100 100" aria-hidden="true"><path d="M45.315 20.951 L20.369 64.158 A5.41 5.41 0 0 0 22.786 71.775 A64.918 64.918 0 0 0 77.214 71.775 A5.41 5.41 0 0 0 79.631 64.158 L54.685 20.951 A5.41 5.41 0 0 0 45.315 20.951 Z" fill="none" stroke="currentColor" stroke-width="8" stroke-linejoin="round"/></svg><span>ARKDALE</span></div></nav></div></div>
-<main class="wrap"><section class="hero2"><h1>Run every protective operation from one place.</h1>
-<p>Built for executive protection, corporate security and family office teams. Simple from the field to the office.</p>
-<div class="af" id="af">
-<form id="rq" action="mailto:hello@arkdale.com?subject=Request%20Access" method="post" enctype="text/plain" aria-label="Request Access">
-<label>Full Name<input name="name" autocomplete="name" placeholder="Jordan Avery" required minlength="2" maxlength="120" aria-describedby="e-name"><span class="err" id="e-name" aria-live="polite"></span></label>
-<label>Work Email<input name="email" type="email" autocomplete="email" inputmode="email" placeholder="jordan@company.com" required maxlength="200" aria-describedby="e-email"><span class="err" id="e-email" aria-live="polite"></span></label>
-<label class="full">Organization<input name="organization" autocomplete="organization" placeholder="Company, family office or church" required minlength="2" maxlength="160" aria-describedby="e-organization"><span class="err" id="e-organization" aria-live="polite"></span></label>
-<label>Team Size<select name="team_size" required aria-describedby="e-team_size"><option value="">Choose</option><option>Just me</option><option>2 to 10</option><option>11 to 30</option><option>More than 30</option></select><span class="err" id="e-team_size" aria-live="polite"></span></label>
-<label><span>Plan You're Interested In <small>Optional</small></span><select name="plan"><option>Not sure yet</option><option>Solo</option><option>Detail</option><option>Program</option><option>Founding Partner</option><option>Faith Single Campus</option><option>Faith Multi-Campus</option></select></label>
-<label class="full"><span>Anything We Should Know? <small>Optional</small></span><textarea name="message" maxlength="500" placeholder="What your team does today, and what you'd like to fix."></textarea></label>
-<button class="send" type="submit"><b>Request Access</b></button>
-<p class="fine">Opens your email app to send your request to <a href="mailto:hello@arkdale.com">hello@arkdale.com</a>.</p>
-<p class="fine">Please don't include details about principals, trips or locations.</p>
+.js .rv{opacity:0;transform:translateY(16px);transition:opacity .9s cubic-bezier(.2,.8,.2,1),transform .9s cubic-bezier(.2,.8,.2,1)}.js .rv.v{opacity:1;transform:none}
+@media (max-width:360px){.ha{gap:12px;padding-top:16px}.ha h1{font-size:29px}.ha .sub{font-size:14.5px}.ha .phone .frame{max-width:236px}.ha .phone .cap{display:none}}
+@media (max-width:760px){.for{display:grid;grid-template-columns:auto auto;justify-content:center;gap:8px 22px}.for li:last-child{grid-column:1/-1;justify-self:center}.rq .fine{text-align:left;margin:0}.wrap{padding:0 16px}.rq form{grid-template-columns:1fr}.rq .more>div{grid-template-columns:1fr}.rq .send{width:100%}.sub{font-size:17px}footer{margin-top:72px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}.js .rv{opacity:1;transform:none}}
+
+.ha{padding:44px 0 0;text-align:center;display:grid;justify-items:center;gap:16px}
+.ha h1{font-size:clamp(38px,5.2vw,64px);max-width:16ch}
+.ha .sub{max-width:52ch}
+.ha .rq{max-width:1100px;margin-top:10px}
+@media (min-width:761px) and (max-width:1099px){.ha .rq .row{display:contents}.ha .rq .opt{grid-column:1;grid-row:2}.ha .rq .fine{grid-column:2;grid-row:2;align-self:center;text-align:left;font-size:12px}.ha .rq .send{grid-column:3;grid-row:2;justify-self:end}.ha .rq .more{grid-row:3}}
+@media (min-width:1100px){.ha .rq form{grid-template-columns:.8fr 1.5fr .9fr auto;align-items:end}.ha .rq .send{grid-column:4;grid-row:1}
+ .ha .rq .row{display:contents}.ha .rq .opt{grid-column:1/2;grid-row:2}.ha .rq .fine{grid-column:2/5;grid-row:2;justify-self:end;text-align:right;align-self:center}.ha .rq .more{grid-row:3;grid-column:1/4}.ha .rq .more>div{grid-template-columns:.8fr 1.5fr .9fr}.ha .rq .more .full{grid-column:3;grid-row:1}.ha .rq .more textarea{min-height:50px;height:50px;resize:none;overflow-y:auto}.ha .rq .more>div{align-items:start}}
+.shot{position:relative;margin:40px auto 0;max-width:1120px;isolation:isolate}
+.glow{position:absolute;left:50%;top:-6%;width:80%;height:70%;transform:translateX(-50%);z-index:-1;background:radial-gradient(closest-side,rgba(232,163,61,.20),rgba(232,163,61,0));pointer-events:none}
+.frame{border-radius:14px;background:#0F1011;overflow:hidden;box-shadow:0 0 0 1px rgba(11,13,14,.06),0 2px 4px rgba(11,13,14,.06),0 12px 24px -6px rgba(11,13,14,.14),0 40px 80px -24px rgba(11,13,14,.32)}
+.bar{display:flex;align-items:center;gap:7px;height:34px;padding:0 14px;background:#18191B;border-bottom:1px solid rgba(255,255,255,.06)}
+.bar i{width:10px;height:10px;border-radius:50%;background:#3A3C3F}.bar span{margin:0 auto;font-size:11.5px;color:#8A8F94;letter-spacing:.02em;transform:translateX(-24px)}
+.frame img{display:block;width:100%;height:auto}
+.desk .frame{position:relative}.desk .frame::after{content:"";position:absolute;left:0;right:0;bottom:0;height:90px;background:linear-gradient(rgba(15,16,17,0),#0F1011);pointer-events:none}
+.cap{margin:20px auto 0;max-width:62ch;text-align:center;color:var(--mu);font-size:14.5px;line-height:1.5;text-wrap:balance}.cap b{color:var(--fg);font-weight:600}
+.ha2{margin-top:56px}
+.fpw{text-align:center;margin-top:72px}.ha .fp-phone{display:none}.fpw+.shot.desk{margin-top:24px}
+@media (max-width:760px){.fpw{display:none}.ha .fp-phone{display:inline-flex;margin:6px 0 4px}}
+.fp{margin:2px 0 0;display:inline-flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:center;font-size:14px;color:var(--body);text-wrap:balance}.fp span{font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#9A5B05;background:#FDF3E2;border-radius:999px;padding:4px 10px}
+.ha .phone{display:none}
+@media (max-width:760px){.ha{padding-top:24px;gap:14px}.ha .kk{display:none}.desk{display:none}.ha .phone{display:block;margin:0;width:100%}.ha .phone .cap{margin-top:10px;font-size:13px;color:var(--mu2)}.ha .sub{font-size:16px}.ha h1{font-size:34px}
+ .phone .frame{position:relative;max-width:310px;margin:0 auto;border-radius:16px;padding:0;background:#0F1011;box-shadow:0 0 0 1px rgba(11,13,14,.1),0 20px 40px -24px rgba(11,13,14,.45)}.phone .frame img{border-radius:0}}
+</style></head><body><div class="wrap"><nav><a class="brand" href="#" aria-label="Arkdale"><svg viewBox="0 0 100 100" aria-hidden="true"><path d="M45.315 20.951 L20.369 64.158 A5.41 5.41 0 0 0 22.786 71.775 A64.918 64.918 0 0 0 77.214 71.775 A5.41 5.41 0 0 0 79.631 64.158 L54.685 20.951 A5.41 5.41 0 0 0 45.315 20.951 Z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="8"/></svg><span>ARKDALE</span></a><a class="navcta" href="#request">Request Access</a></nav></div><main class="wrap"><section class="ha" id="request">
+<span class="kk"><i></i>Request Access Is Open</span>
+<h1>Run every protective operation from one place.</h1><p class="sub">Built for executive protection, corporate security and family office teams. Simple from the field to the office.</p><p class="fp fp-phone"><span>Founding Partner</span>The first 5 teams get $1,499 a month for their first 12 months.</p><div class="shot phone"><div class="frame"><img src="img/phone-schedule.jpg" alt="Arkdale on a phone: the trip schedule with each position and shift." width="800" height="545"></div></div>
+<div class="rq" id="rq"><noscript><style>.rq form{display:none}</style><p class="nojs">To request access, email <a href="mailto:hello@arkdale.com?subject=Request%20Access"><b>hello@arkdale.com</b></a> with your name, work email and organization.</p></noscript><form novalidate aria-label="Request Access"><div class="fld"><div class="lh"><label for="f-name">Full Name</label><span class="err" id="e-name" aria-live="polite"></span></div><input id="f-name" name="name" placeholder="Jordan Avery" required aria-describedby="e-name" data-err="Add your full name." autocomplete="name" minlength="2" maxlength="120"></div><div class="fld"><div class="lh"><label for="f-email">Work Email</label><span class="err" id="e-email" aria-live="polite"></span></div><input id="f-email" name="email" placeholder="jordan@company.com" required aria-describedby="e-email" data-err="Add your work email." type="email" autocomplete="email" inputmode="email" maxlength="200"></div><div class="fld"><div class="lh"><label for="f-organization">Organization</label><span class="err" id="e-organization" aria-live="polite"></span></div><input id="f-organization" name="organization" placeholder="Your organization" required aria-describedby="e-organization" data-err="Add your organization." autocomplete="organization" minlength="2" maxlength="160"></div><div class="row"><button class="send" type="submit">Request Access<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div>
 </form>
-<div class="ok" role="status"><i><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7.5h16v10H4z M4 7.5l8 6 8-6" fill="none" stroke="#C47F12" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></i><h2 tabindex="-1">Almost done.</h2><p>Your request is filled in, ready to send to hello@arkdale.com. Nothing is sent until you press Send in your email app.</p><div class="acts"><a id="again" href="mailto:hello@arkdale.com">Open the email again</a><button type="button" id="edit">Edit request</button></div><p class="alt">If your email app did not open, write to <a href="mailto:hello@arkdale.com">hello@arkdale.com</a>.</p></div>
-</div>
-</section>
-<p class="for"><span>Executive protection</span><span>Corporate security</span><span>Family offices</span><span>Residential</span><span>Independent agents</span></p>
-</main>
-<footer class="ft2"><span>© 2026 Arkdale</span><a href="mailto:hello@arkdale.com">hello@arkdale.com</a></footer>
-<script>(()=>{const B=document.getElementById('af'),F=document.getElementById('rq'),S=F.querySelector('.send'),A=document.getElementById('again'),H=B.querySelector('.ok h2');let busy=false;
-F.noValidate=true;
-const req=[['name',v=>v.trim().length>1,'Please add your full name.'],['email',v=>/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v.trim()),'Please add a valid work email.'],['organization',v=>v.trim().length>1,'Please add your organization.'],['team_size',v=>!!v,'Please choose a team size.']];
-const chk=(id,show)=>{const [,ok,msg]=req.find(r=>r[0]===id),el=F.elements[id],w=el.closest('label'),good=ok(el.value);if(show||w.classList.contains('bad')){w.classList.toggle('bad',!good);w.querySelector('.err').textContent=good?'':msg;el.setAttribute('aria-invalid',good?'false':'true')}return good};
-req.forEach(([id])=>{const el=F.elements[id];el.addEventListener('blur',()=>chk(id,el.value!==''));el.addEventListener('input',()=>chk(id,false));el.addEventListener('change',()=>chk(id,false))});
-const v=n=>F.elements[n].value.trim();
-const first=n=>{const t=n.split(/\s+/);if(t.length>1&&/^(dr|mr|mrs|ms)\.?$/i.test(t[0]))t.shift();return t[0].replace(/\.+$/,'')||t[0]};
-const build=()=>{const lines=[['Full Name',v('name')],['Work Email',v('email')],['Organization',v('organization')],['Team Size',v('team_size')],['Plan You\'re Interested In',v('plan')],['Anything We Should Know?',v('message')||'-']].map(([k,x])=>k+': '+x);
- return 'mailto:hello@arkdale.com?subject='+encodeURIComponent('Request Access: '+v('organization'))+'&body='+encodeURIComponent(lines.join('\r\n')+'\r\n')};
-F.addEventListener('submit',e=>{e.preventDefault();if(busy)return;const bad=req.filter(([id])=>!chk(id,true));if(bad.length){F.elements[bad[0][0]].focus();return}
- busy=true;S.disabled=true;A.href=build();const fn=first(v('name'));H.textContent=fn.length>14?'Almost done.':'Almost done, '+fn+'.';B.classList.add('done');A.click();H.focus()});
-document.getElementById('edit').addEventListener('click',()=>{B.classList.remove('done');busy=false;S.disabled=false;F.elements.name.focus()});
-addEventListener('pageshow',e=>{if(e.persisted){busy=false;S.disabled=false}})})();</script>
-</body></html>
+<div class="done-box" role="status"><i><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7.5h16v10H4z M4 7.5l8 6 8-6" fill="none" stroke="#C47F12" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></i>
+<h3 tabindex="-1">Send it from your email app.</h3>
+<p>Your email app should open with your request filled in. Nothing is sent until you press Send there.</p>
+<p>If nothing opened, copy your request and email it to <span class="addr">hello@arkdale.com</span>.</p>
+<div class="acts"><button type="button" class="pr copy">Copy Request</button><button type="button" class="edit">Edit Request</button></div><p class="mhint" hidden>Copying didn't work here. Copy the request below, then email it to hello@arkdale.com.</p><textarea class="manual" readonly hidden aria-label="Your request. Select it and copy it."></textarea></div>
+</div></section>
+<div class="fpw"><p class="fp fp-desk"><span>Founding Partner</span>The first 5 teams get $1,499 a month for their first 12 months.</p></div>
+<div class="shot desk"><div class="glow" aria-hidden="true"></div><div class="frame"><div class="bar"><i></i><i></i><i></i><span>arkdale.com</span></div><img src="img/chat-full.jpg" alt="Arkdale Detail Chat: one channel per trip, where the team posts advance updates and turns a message into a task." width="2000" height="947"></div></div>
+<div class="ha2"><ul class="for" aria-label="Who Arkdale is for"><li>Executive protection</li><li>Corporate security</li><li>Family offices</li><li>Residential</li><li>Independent agents</li></ul></div></main><div class="wrap"><footer class="fe"><span>&copy; 2026 Arkdale</span><a href="mailto:hello@arkdale.com">hello@arkdale.com</a></footer></div><script>(()=>{const P=new URLSearchParams(location.search),q={includes:k=>P.has(k)};document.documentElement.classList.add('js');
+const R=document.getElementById('rq');if(R){const F=R.querySelector('form'),O=R.querySelector('.opt'),M=R.querySelectorAll('.more select,.more textarea'),H=R.querySelector('.done-box h3'),C=R.querySelector('.copy');
+let tog=()=>{};if(O){tog=o=>{R.classList.toggle('open',o);O.childNodes[1].nodeValue=o?'Hide Details ':'Add Details ';O.setAttribute('aria-expanded',o);M.forEach(x=>x.tabIndex=o?0:-1);R.querySelector('.more>div').inert=!o;if(o&&!q.includes('shot'))setTimeout(()=>M[0].focus(),200)};
+O.addEventListener('click',()=>tog(!R.classList.contains('open')));R.querySelector('.more').addEventListener('keydown',e=>{if(e.key==='Escape'){tog(false);O.focus()}});O.addEventListener('keydown',e=>{if(e.key==='Escape'&&R.classList.contains('open'))tog(false)});}
+const ok={name:v=>v.trim().length>1,email:v=>/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v.trim()),organization:v=>v.trim().length>1};
+const mark=(i,good)=>{i.closest('.fld').classList.toggle('bad',!good);i.setAttribute('aria-invalid',good?'false':'true');const e=document.getElementById('e-'+i.name);e.textContent=good?'':(i.name==='email'&&i.value.trim()?'Check this email.':i.dataset.err)};
+F.addEventListener('input',e=>{const f=ok[e.target.name];if(f&&f(e.target.value))mark(e.target,true)});
+let body='';F.addEventListener('submit',e=>{e.preventDefault();let first=null;for(const k in ok){const i=F.elements[k],g=ok[k](i.value);mark(i,g);if(!g&&!first)first=i}
+if(first){first.focus();return}const L={name:'Full Name',email:'Work Email',organization:'Organization',team_size:'Team Size',plan:'Plan',message:'Note'};
+const MB=R.querySelector('.manual');MB.hidden=true;MB.value='';R.querySelector('.mhint').hidden=true;C.textContent='Copy Request';
+body=[...new FormData(F)].filter(([k,v])=>v).map(([k,v])=>L[k]+': '+v).join('\n');R.classList.add('done');H.focus({preventScroll:true});R.querySelector('.done-box').scrollIntoView({block:'center',behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'auto':'smooth'});
+if(!q.includes('shot'))location.href='mailto:hello@arkdale.com?subject='+encodeURIComponent('Request Access')+'&body='+encodeURIComponent(body)});
+C.addEventListener('click',()=>{const t='To: hello@arkdale.com\nSubject: Request Access\n\n'+body;const done=()=>{C.textContent='Copied';setTimeout(()=>C.textContent='Copy Request',1800)};
+(navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(done,()=>{const a=document.createElement('textarea');a.value=t;a.style.cssText='position:fixed;top:0;left:0;opacity:0;pointer-events:none';document.body.appendChild(a);a.select();let ok=false;try{ok=document.execCommand('copy')}catch(x){}a.remove();if(ok)done();else{const t2=R.querySelector('.manual');t2.value=t;t2.hidden=false;R.querySelector('.mhint').hidden=false;t2.style.height='auto';t2.style.height=(t2.scrollHeight+4)+'px';t2.focus({preventScroll:true});t2.select();t2.scrollTop=0;R.querySelector('.done-box').scrollIntoView({block:'start'});C.textContent='Copy Failed'}})});
+const NT=F.elements.message;if(NT){const grow=()=>{NT.style.height='auto';NT.style.height=Math.min(Math.max(NT.scrollHeight+2,50),innerWidth>=1100?100:140)+'px'};const CN=R.querySelector('.cnt');NT.addEventListener('input',()=>{grow();const n=NT.value.length;CN.textContent=n>=400?n+' of 500':'Optional'});}
+R.querySelector('.edit').addEventListener('click',()=>{R.classList.remove('done');const MB=R.querySelector('.manual');MB.hidden=true;MB.value='';R.querySelector('.mhint').hidden=true;C.textContent='Copy Request';F.elements.name.focus()});
+if(q.includes('open'))tog(true);if(q.includes('done')){R.classList.add('done')}}
+document.querySelectorAll('a[href="#request"]').forEach(a=>a.addEventListener('click',e=>{const t=document.getElementById('request');if(!t||!R)return;e.preventDefault();
+(R||t).scrollIntoView({behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'auto':'smooth',block:'start'});setTimeout(()=>R.querySelector('input').focus({preventScroll:true}),450)}));
+const els=[...document.querySelectorAll('.rv')];if(q.includes('shot')||!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion:reduce)').matches){els.forEach(e=>e.classList.add('v'))}
+else{const o=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('v');o.unobserve(e.target)}}),{threshold:0,rootMargin:'0px 0px -8% 0px'});els.forEach(e=>o.observe(e))}})();</script></body></html>
